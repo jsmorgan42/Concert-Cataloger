@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A919B050283418260032BF2A /* Concert_CatalogerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A919B04F283418260032BF2A /* Concert_CatalogerApp.swift */; };
+		A919B052283418260032BF2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A919B051283418260032BF2A /* ContentView.swift */; };
+		A919B054283418270032BF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A919B053283418270032BF2A /* Assets.xcassets */; };
+		A919B057283418270032BF2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A919B056283418270032BF2A /* Preview Assets.xcassets */; };
+		A919B061283418270032BF2A /* Concert_CatalogerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A919B060283418270032BF2A /* Concert_CatalogerTests.swift */; };
+		A919B06B283418270032BF2A /* Concert_CatalogerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A919B06A283418270032BF2A /* Concert_CatalogerUITests.swift */; };
+		A919B06D283418270032BF2A /* Concert_CatalogerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A919B06C283418270032BF2A /* Concert_CatalogerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A919B05D283418270032BF2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A919B044283418260032BF2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A919B04B283418260032BF2A;
+			remoteInfo = "Concert Cataloger";
+		};
+		A919B067283418270032BF2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A919B044283418260032BF2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A919B04B283418260032BF2A;
+			remoteInfo = "Concert Cataloger";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A919B04C283418260032BF2A /* Concert Cataloger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Concert Cataloger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A919B04F283418260032BF2A /* Concert_CatalogerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert_CatalogerApp.swift; sourceTree = "<group>"; };
+		A919B051283418260032BF2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A919B053283418270032BF2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A919B056283418270032BF2A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A919B05C283418270032BF2A /* Concert CatalogerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Concert CatalogerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A919B060283418270032BF2A /* Concert_CatalogerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert_CatalogerTests.swift; sourceTree = "<group>"; };
+		A919B066283418270032BF2A /* Concert CatalogerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Concert CatalogerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A919B06A283418270032BF2A /* Concert_CatalogerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert_CatalogerUITests.swift; sourceTree = "<group>"; };
+		A919B06C283418270032BF2A /* Concert_CatalogerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert_CatalogerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A919B049283418260032BF2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A919B059283418270032BF2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A919B063283418270032BF2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A919B043283418260032BF2A = {
+			isa = PBXGroup;
+			children = (
+				A919B04E283418260032BF2A /* Concert Cataloger */,
+				A919B05F283418270032BF2A /* Concert CatalogerTests */,
+				A919B069283418270032BF2A /* Concert CatalogerUITests */,
+				A919B04D283418260032BF2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A919B04D283418260032BF2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A919B04C283418260032BF2A /* Concert Cataloger.app */,
+				A919B05C283418270032BF2A /* Concert CatalogerTests.xctest */,
+				A919B066283418270032BF2A /* Concert CatalogerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A919B04E283418260032BF2A /* Concert Cataloger */ = {
+			isa = PBXGroup;
+			children = (
+				A919B04F283418260032BF2A /* Concert_CatalogerApp.swift */,
+				A919B051283418260032BF2A /* ContentView.swift */,
+				A919B053283418270032BF2A /* Assets.xcassets */,
+				A919B055283418270032BF2A /* Preview Content */,
+			);
+			path = "Concert Cataloger";
+			sourceTree = "<group>";
+		};
+		A919B055283418270032BF2A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A919B056283418270032BF2A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A919B05F283418270032BF2A /* Concert CatalogerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A919B060283418270032BF2A /* Concert_CatalogerTests.swift */,
+			);
+			path = "Concert CatalogerTests";
+			sourceTree = "<group>";
+		};
+		A919B069283418270032BF2A /* Concert CatalogerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A919B06A283418270032BF2A /* Concert_CatalogerUITests.swift */,
+				A919B06C283418270032BF2A /* Concert_CatalogerUITestsLaunchTests.swift */,
+			);
+			path = "Concert CatalogerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A919B04B283418260032BF2A /* Concert Cataloger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A919B070283418270032BF2A /* Build configuration list for PBXNativeTarget "Concert Cataloger" */;
+			buildPhases = (
+				A919B048283418260032BF2A /* Sources */,
+				A919B049283418260032BF2A /* Frameworks */,
+				A919B04A283418260032BF2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Concert Cataloger";
+			productName = "Concert Cataloger";
+			productReference = A919B04C283418260032BF2A /* Concert Cataloger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A919B05B283418270032BF2A /* Concert CatalogerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A919B073283418270032BF2A /* Build configuration list for PBXNativeTarget "Concert CatalogerTests" */;
+			buildPhases = (
+				A919B058283418270032BF2A /* Sources */,
+				A919B059283418270032BF2A /* Frameworks */,
+				A919B05A283418270032BF2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A919B05E283418270032BF2A /* PBXTargetDependency */,
+			);
+			name = "Concert CatalogerTests";
+			productName = "Concert CatalogerTests";
+			productReference = A919B05C283418270032BF2A /* Concert CatalogerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A919B065283418270032BF2A /* Concert CatalogerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A919B076283418270032BF2A /* Build configuration list for PBXNativeTarget "Concert CatalogerUITests" */;
+			buildPhases = (
+				A919B062283418270032BF2A /* Sources */,
+				A919B063283418270032BF2A /* Frameworks */,
+				A919B064283418270032BF2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A919B068283418270032BF2A /* PBXTargetDependency */,
+			);
+			name = "Concert CatalogerUITests";
+			productName = "Concert CatalogerUITests";
+			productReference = A919B066283418270032BF2A /* Concert CatalogerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A919B044283418260032BF2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					A919B04B283418260032BF2A = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					A919B05B283418270032BF2A = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = A919B04B283418260032BF2A;
+					};
+					A919B065283418270032BF2A = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = A919B04B283418260032BF2A;
+					};
+				};
+			};
+			buildConfigurationList = A919B047283418260032BF2A /* Build configuration list for PBXProject "Concert Cataloger" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A919B043283418260032BF2A;
+			productRefGroup = A919B04D283418260032BF2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A919B04B283418260032BF2A /* Concert Cataloger */,
+				A919B05B283418270032BF2A /* Concert CatalogerTests */,
+				A919B065283418270032BF2A /* Concert CatalogerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A919B04A283418260032BF2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A919B057283418270032BF2A /* Preview Assets.xcassets in Resources */,
+				A919B054283418270032BF2A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A919B05A283418270032BF2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A919B064283418270032BF2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A919B048283418260032BF2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A919B052283418260032BF2A /* ContentView.swift in Sources */,
+				A919B050283418260032BF2A /* Concert_CatalogerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A919B058283418270032BF2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A919B061283418270032BF2A /* Concert_CatalogerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A919B062283418270032BF2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A919B06D283418270032BF2A /* Concert_CatalogerUITestsLaunchTests.swift in Sources */,
+				A919B06B283418270032BF2A /* Concert_CatalogerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A919B05E283418270032BF2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A919B04B283418260032BF2A /* Concert Cataloger */;
+			targetProxy = A919B05D283418270032BF2A /* PBXContainerItemProxy */;
+		};
+		A919B068283418270032BF2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A919B04B283418260032BF2A /* Concert Cataloger */;
+			targetProxy = A919B067283418270032BF2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A919B06E283418270032BF2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A919B06F283418270032BF2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A919B071283418270032BF2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Concert Cataloger/Preview Content\"";
+				DEVELOPMENT_TEAM = PR6BATB568;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jsm.Concert-Cataloger";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A919B072283418270032BF2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Concert Cataloger/Preview Content\"";
+				DEVELOPMENT_TEAM = PR6BATB568;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jsm.Concert-Cataloger";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A919B074283418270032BF2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PR6BATB568;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jsm.Concert-CatalogerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Concert Cataloger.app/Concert Cataloger";
+			};
+			name = Debug;
+		};
+		A919B075283418270032BF2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PR6BATB568;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jsm.Concert-CatalogerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Concert Cataloger.app/Concert Cataloger";
+			};
+			name = Release;
+		};
+		A919B077283418270032BF2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PR6BATB568;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jsm.Concert-CatalogerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Concert Cataloger";
+			};
+			name = Debug;
+		};
+		A919B078283418270032BF2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PR6BATB568;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jsm.Concert-CatalogerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Concert Cataloger";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A919B047283418260032BF2A /* Build configuration list for PBXProject "Concert Cataloger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A919B06E283418270032BF2A /* Debug */,
+				A919B06F283418270032BF2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A919B070283418270032BF2A /* Build configuration list for PBXNativeTarget "Concert Cataloger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A919B071283418270032BF2A /* Debug */,
+				A919B072283418270032BF2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A919B073283418270032BF2A /* Build configuration list for PBXNativeTarget "Concert CatalogerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A919B074283418270032BF2A /* Debug */,
+				A919B075283418270032BF2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A919B076283418270032BF2A /* Build configuration list for PBXNativeTarget "Concert CatalogerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A919B077283418270032BF2A /* Debug */,
+				A919B078283418270032BF2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A919B044283418260032BF2A /* Project object */;
+}
