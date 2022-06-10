@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A916F32C2846894B00557CA2 /* Concert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916F32B2846894B00557CA2 /* Concert.swift */; };
+		A916F32F28468A5600557CA2 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916F32E28468A5600557CA2 /* Artist.swift */; };
+		A916F33328468AF000557CA2 /* ConcertForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916F33228468AF000557CA2 /* ConcertForm.swift */; };
+		A916F336284691C500557CA2 /* AssetPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916F335284691C500557CA2 /* AssetPicker.swift */; };
+		A916F3392847DEEC00557CA2 /* DiskBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916F3382847DEEC00557CA2 /* DiskBacked.swift */; };
+		A916F33C2847DFF200557CA2 /* Disk in Frameworks */ = {isa = PBXBuildFile; productRef = A916F33B2847DFF200557CA2 /* Disk */; };
 		A919B050283418260032BF2A /* Concert_CatalogerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A919B04F283418260032BF2A /* Concert_CatalogerApp.swift */; };
 		A919B052283418260032BF2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A919B051283418260032BF2A /* ContentView.swift */; };
 		A919B054283418270032BF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A919B053283418270032BF2A /* Assets.xcassets */; };
@@ -14,6 +20,7 @@
 		A919B061283418270032BF2A /* Concert_CatalogerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A919B060283418270032BF2A /* Concert_CatalogerTests.swift */; };
 		A919B06B283418270032BF2A /* Concert_CatalogerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A919B06A283418270032BF2A /* Concert_CatalogerUITests.swift */; };
 		A919B06D283418270032BF2A /* Concert_CatalogerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A919B06C283418270032BF2A /* Concert_CatalogerUITestsLaunchTests.swift */; };
+		A98248FC284FD37400DB4E67 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98248FB284FD37400DB4E67 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A916F32B2846894B00557CA2 /* Concert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert.swift; sourceTree = "<group>"; };
+		A916F32E28468A5600557CA2 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		A916F33228468AF000557CA2 /* ConcertForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertForm.swift; sourceTree = "<group>"; };
+		A916F335284691C500557CA2 /* AssetPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetPicker.swift; sourceTree = "<group>"; };
+		A916F3382847DEEC00557CA2 /* DiskBacked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskBacked.swift; sourceTree = "<group>"; };
 		A919B04C283418260032BF2A /* Concert Cataloger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Concert Cataloger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A919B04F283418260032BF2A /* Concert_CatalogerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert_CatalogerApp.swift; sourceTree = "<group>"; };
 		A919B051283418260032BF2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +56,7 @@
 		A919B066283418270032BF2A /* Concert CatalogerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Concert CatalogerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A919B06A283418270032BF2A /* Concert_CatalogerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert_CatalogerUITests.swift; sourceTree = "<group>"; };
 		A919B06C283418270032BF2A /* Concert_CatalogerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert_CatalogerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A98248FB284FD37400DB4E67 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A916F33C2847DFF200557CA2 /* Disk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +85,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A916F32D28468A4800557CA2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A916F32B2846894B00557CA2 /* Concert.swift */,
+				A916F32E28468A5600557CA2 /* Artist.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A916F33128468ADB00557CA2 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				A916F33428468B3800557CA2 /* Form */,
+				A919B04F283418260032BF2A /* Concert_CatalogerApp.swift */,
+				A919B051283418260032BF2A /* ContentView.swift */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		A916F33428468B3800557CA2 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				A916F33228468AF000557CA2 /* ConcertForm.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		A916F3372847DE8D00557CA2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A916F3382847DEEC00557CA2 /* DiskBacked.swift */,
+				A98248FB284FD37400DB4E67 /* DataManager.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		A919B043283418260032BF2A = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +144,12 @@
 		A919B04E283418260032BF2A /* Concert Cataloger */ = {
 			isa = PBXGroup;
 			children = (
-				A919B04F283418260032BF2A /* Concert_CatalogerApp.swift */,
-				A919B051283418260032BF2A /* ContentView.swift */,
+				A916F3372847DE8D00557CA2 /* Common */,
+				A916F33128468ADB00557CA2 /* User Interface */,
+				A916F32D28468A4800557CA2 /* Models */,
 				A919B053283418270032BF2A /* Assets.xcassets */,
 				A919B055283418270032BF2A /* Preview Content */,
+				A916F335284691C500557CA2 /* AssetPicker.swift */,
 			);
 			path = "Concert Cataloger";
 			sourceTree = "<group>";
@@ -143,6 +195,9 @@
 			dependencies = (
 			);
 			name = "Concert Cataloger";
+			packageProductDependencies = (
+				A916F33B2847DFF200557CA2 /* Disk */,
+			);
 			productName = "Concert Cataloger";
 			productReference = A919B04C283418260032BF2A /* Concert Cataloger.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +270,9 @@
 				Base,
 			);
 			mainGroup = A919B043283418260032BF2A;
+			packageReferences = (
+				A916F33A2847DFF200557CA2 /* XCRemoteSwiftPackageReference "Disk" */,
+			);
 			productRefGroup = A919B04D283418260032BF2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +315,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A916F3392847DEEC00557CA2 /* DiskBacked.swift in Sources */,
+				A98248FC284FD37400DB4E67 /* DataManager.swift in Sources */,
+				A916F33328468AF000557CA2 /* ConcertForm.swift in Sources */,
 				A919B052283418260032BF2A /* ContentView.swift in Sources */,
+				A916F32C2846894B00557CA2 /* Concert.swift in Sources */,
+				A916F336284691C500557CA2 /* AssetPicker.swift in Sources */,
+				A916F32F28468A5600557CA2 /* Artist.swift in Sources */,
 				A919B050283418260032BF2A /* Concert_CatalogerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +647,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A916F33A2847DFF200557CA2 /* XCRemoteSwiftPackageReference "Disk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/saoudrizwan/Disk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A916F33B2847DFF200557CA2 /* Disk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A916F33A2847DFF200557CA2 /* XCRemoteSwiftPackageReference "Disk" */;
+			productName = Disk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A919B044283418260032BF2A /* Project object */;
 }
