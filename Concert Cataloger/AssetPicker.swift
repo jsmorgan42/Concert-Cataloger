@@ -1,5 +1,5 @@
 //
-//  ImagePicker.swift
+//  PhotoLibraryPicker.swift
 //  Concert Cataloger
 //
 //  Created by Jesse Morgan on 5/31/22.
@@ -13,9 +13,9 @@ protocol CoordinatorDelegate {
     func didUpdateLoadingState(_ isLoading: Bool)
 }
 
-struct ImagePicker: UIViewControllerRepresentable, CoordinatorDelegate {
+struct PhotoLibraryPicker: UIViewControllerRepresentable, CoordinatorDelegate {
 
-    @Binding var images: [UIImage]?
+    @Binding var assetIds: [String]?
     @Binding var isLoading: Bool
 
     func makeUIViewController(context: Context) -> PHPickerViewController {
@@ -40,7 +40,7 @@ struct ImagePicker: UIViewControllerRepresentable, CoordinatorDelegate {
     // MARK: CoordinatorDelegate
 
     func didFinishPickingImages(_ images: [UIImage]) {
-        self.images = images
+        self.assetIds = images
         print("*** Images Loaded: \(images.count)")
     }
 
@@ -55,32 +55,33 @@ struct ImagePicker: UIViewControllerRepresentable, CoordinatorDelegate {
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
             delegate?.didUpdateLoadingState(true)
             picker.dismiss(animated: true)
-            print("*** Did Dismiss")
 
-            var images: [UIImage] = []
+            self.assetIds = results.map { $0.assetIdentifier }
 
-            results.enumerated().forEach { (index, result) in
-                let provider = result.itemProvider
-
-                if provider.canLoadObject(ofClass: UIImage.self) {
-                    provider.loadObject(ofClass: UIImage.self) { image, error in
-                        if let error = error {
-                            print("*** Error: \(error)")
-                        }
-
-                        guard let image = image as? UIImage else {
-                            print("*** Nil image")
-                            return
-                        }
-                        images.append(image)
-
-                        if index == results.count - 1 {
-                            self.delegate?.didFinishPickingImages(images)
-                            self.delegate?.didUpdateLoadingState(false)
-                        }
-                    }
-                }
-            }
+//            var images: [UIImage] = []
+//
+//            results.enumerated().forEach { (index, result) in
+//                let provider = result.itemProvider
+//
+//                if provider.canLoadObject(ofClass: UIImage.self) {
+//                    provider.loadObject(ofClass: UIImage.self) { image, error in
+//                        if let error = error {
+//                            print("*** Error: \(error)")
+//                        }
+//
+//                        guard let image = image as? UIImage else {
+//                            print("*** Nil image")
+//                            return
+//                        }
+//                        images.append(image)
+//
+//                        if index == results.count - 1 {
+//                            self.delegate?.didFinishPickingImages(images)
+//                            self.delegate?.didUpdateLoadingState(false)
+//                        }
+//                    }
+//                }
+//            }
         }
     }
 }

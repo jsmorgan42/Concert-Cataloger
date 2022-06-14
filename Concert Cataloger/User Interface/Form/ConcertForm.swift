@@ -33,7 +33,7 @@ struct ConcertForm: View {
                     showingImagePicker.toggle()
                 }
                 .sheet(isPresented: $showingImagePicker) {
-                    ImagePicker(images: $images, isLoading: $isLoadingImages)
+                    PhotoLibraryPicker(assetIds: $images, isLoading: $isLoadingImages)
                 }
                 if isLoadingImages {
                     // TODO: Figure out why this isn't showing up after the first time

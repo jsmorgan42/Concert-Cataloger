@@ -14,5 +14,5 @@ struct Concert: Codable {
     let artists: [Artist]
     let date: Date
 //    let location: CLLocation?
-//    let images: [UIImage]?
+    let assetIndentifiers: [String]?
 }
