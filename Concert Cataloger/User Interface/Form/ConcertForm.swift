@@ -9,14 +9,16 @@ import SwiftUI
 
 struct ConcertForm: View {
 
-    @Environment(\.presentationMode) var presentation
+    @Environment(\.dismiss) var dismiss
 
     @State var artistName = ""
     @State var date = Date()
-    @State var images: [UIImage]?
+    @State var assets: [Asset] = []
     @State var isLoadingImages = false
 
     @State private var showingImagePicker = false
+
+    @Environment(\.managedObjectContext) var managedObjectContext
 
     private var gridItems = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
 
@@ -33,22 +35,23 @@ struct ConcertForm: View {
                     showingImagePicker.toggle()
                 }
                 .sheet(isPresented: $showingImagePicker) {
-                    ImagePicker(images: $images, isLoading: $isLoadingImages)
+                    ImagePicker(assets: $assets, isLoading: $isLoadingImages)
                 }
                 if isLoadingImages {
                     // TODO: Figure out why this isn't showing up after the first time
-                    ProgressView("Loading images...")
+                    ProgressView("Loading media...")
                         .progressViewStyle(CircularProgressViewStyle())
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                 } else {
                     LazyVGrid(columns: gridItems, spacing: 20) {
-                        ForEach(images ?? [], id: \.self) { image in
+                        ForEach(assets, id: \.self) { asset in
                             GeometryReader { reader in
-                                Image(uiImage: image)
+                                Image(uiImage: asset.thumbnail)
                                     .resizable()
                                     .scaledToFill()
                                     .frame(height: reader.size.width)
                             }
+                            .cornerRadius(8)
                             .clipped()
                             .aspectRatio(1, contentMode: .fit)
                         }
@@ -57,9 +60,25 @@ struct ConcertForm: View {
             }
         }
         .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button("Cancel") {
+                    self.dismiss()
+                }
+            }
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button("Submit") {
-                    self.presentation.wrappedValue.dismiss()
+                Button("Add") {
+
+                    do {
+                        let artist = Artist(context: managedObjectContext)
+                        artist.name = artistName
+                        let concert = Concert(context: managedObjectContext)
+                        concert.addToArtists(artist)
+                        try managedObjectContext.save()
+                    } catch (let error) {
+                        preconditionFailure("Failed to save new concert: \(error)")
+                    }
+
+                    self.dismiss()
                 }
                 .disabled(isFormIncomplete)
             }

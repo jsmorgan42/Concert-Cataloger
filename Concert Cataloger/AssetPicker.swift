@@ -7,28 +7,28 @@
 
 import PhotosUI
 import SwiftUI
+import QuickLook
 
 protocol CoordinatorDelegate {
-    func didFinishPickingImages(_ images: [UIImage])
+    func didFinishPickingAssets(_ assets: [Asset])
     func didUpdateLoadingState(_ isLoading: Bool)
 }
 
 struct ImagePicker: UIViewControllerRepresentable, CoordinatorDelegate {
 
-    @Binding var images: [UIImage]?
+    @Binding var assets: [Asset]
     @Binding var isLoading: Bool
 
     func makeUIViewController(context: Context) -> PHPickerViewController {
-        var config = PHPickerConfiguration()
+        var config = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
         config.selectionLimit = 0
-        config.filter = .images
         let picker = PHPickerViewController(configuration: config)
         picker.delegate = context.coordinator
         return picker
     }
 
     func updateUIViewController(_ uiViewController: PHPickerViewController, context: Context) {
-
+        
     }
 
     func makeCoordinator() -> Coordinator {
@@ -39,14 +39,12 @@ struct ImagePicker: UIViewControllerRepresentable, CoordinatorDelegate {
 
     // MARK: CoordinatorDelegate
 
-    func didFinishPickingImages(_ images: [UIImage]) {
-        self.images = images
-        print("*** Images Loaded: \(images.count)")
+    func didFinishPickingAssets(_ assets: [Asset]) {
+        self.assets = assets
     }
 
     func didUpdateLoadingState(_ isLoading: Bool) {
         self.isLoading = isLoading
-        print("*** isLoading Updated: \(isLoading)")
     }
 
     class Coordinator: NSObject, PHPickerViewControllerDelegate {
@@ -55,13 +53,11 @@ struct ImagePicker: UIViewControllerRepresentable, CoordinatorDelegate {
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
             delegate?.didUpdateLoadingState(true)
             picker.dismiss(animated: true)
-            print("*** Did Dismiss")
 
-            var images: [UIImage] = []
+            var assets: [Asset] = []
 
             results.enumerated().forEach { (index, result) in
                 let provider = result.itemProvider
-
                 if provider.canLoadObject(ofClass: UIImage.self) {
                     provider.loadObject(ofClass: UIImage.self) { image, error in
                         if let error = error {
@@ -72,11 +68,49 @@ struct ImagePicker: UIViewControllerRepresentable, CoordinatorDelegate {
                             print("*** Nil image")
                             return
                         }
-                        images.append(image)
+
+                        assets.append(Asset(thumbnail: image, assetIdentifier: result.assetIdentifier))
 
                         if index == results.count - 1 {
-                            self.delegate?.didFinishPickingImages(images)
-                            self.delegate?.didUpdateLoadingState(false)
+                            DispatchQueue.main.async {
+                                self.delegate?.didFinishPickingAssets(assets)
+                                self.delegate?.didUpdateLoadingState(false)
+                            }
+                        }
+                    }
+                }
+
+                if provider.hasItemConformingToTypeIdentifier(UTType.movie.identifier) {
+                    provider.loadItem(forTypeIdentifier: UTType.movie.identifier, options: [:]) { (videoURL, error) in
+                        DispatchQueue.main.async {
+                            guard let url = videoURL as? URL else {
+                                print("*** Invalid video URL")
+                                return
+                            }
+
+                            let request = QLThumbnailGenerator.Request.init(fileAt: url, size: .init(width: 100, height: 100), scale: 1.0, representationTypes: .thumbnail)
+
+                            let generator = QLThumbnailGenerator.shared
+
+                            generator.generateBestRepresentation(for: request) { thumbnail, error in
+                                if let error = error {
+                                    print(error)
+                                }
+
+                                guard let cgImage = thumbnail?.cgImage else {
+                                    print("*** Could not generate image")
+                                    return
+                                }
+
+                                assets.append(Asset(thumbnail: UIImage(cgImage: cgImage),
+                                                    assetIdentifier: result.assetIdentifier))
+
+                                if index == results.count - 1 {
+                                    picker.dismiss(animated: true)
+                                    self.delegate?.didFinishPickingAssets(assets)
+                                    self.delegate?.didUpdateLoadingState(false)
+                                }
+                            }
                         }
                     }
                 }
